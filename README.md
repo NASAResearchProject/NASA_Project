@@ -12,4 +12,7 @@ We found 4 datasets on Kaggle. The Sloan Digital Sky Survey data offers the publ
 We merge datasets [here](https://github.com/NASAResearchProject/NASA_Project/blob/Amir-branch/ETL/ETL.ipynb)  
 Our preprocessing code may be found [here](https://github.com/NASAResearchProject/NASA_Project/blob/Amir-branch/ETL/Cleaning%20Complete%20Dataset.ipynb).
 
-### Machine Learning
+### Machine Learning  
+For our first model I chose the supervised algorithm known as [K-Nearest Neighbors](https://github.com/NASAResearchProject/NASA_Project/blob/Amir-branch/Machine%20Learning/K_Nearest_Neighbors.ipynb). The algorithm is simple and elegant. It also required no training step, and is very easy to implement. After the preprocessing step, we had a total of 6 independent features, a relatively small number compared to those of other datasets. This means we don't have to concern ourselves with the curse of dimnesionality, because as the number of variables grow, the K-NN algorithm struggles to predict the output of new data. All of these characteristics of the algorithm and our dataset make choosing the K-NN algorithm an easy choice, and it paid off. Our model was able to predict the class of a celestial object with 95% accuracy.  
+
+Moving forward I would like to consider standardizing all features so that they're homogeneous. K-NN works best when features have the same scale. All columns except for `redshift_` seem to be homogeneous, but nonetheless it is worth tinkering with. I would like to add the fourth dataset to the dataframe as well, because the more datapoints the more data the machine has to learn with. This will allow me to use more robust and complex models such as a neural network.
