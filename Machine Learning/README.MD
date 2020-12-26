@@ -1,0 +1,10 @@
+## Machine Learning Models
+
+### K-Nearest Neighbors  
+For our first model I chose the supervised algorithm known as K-Nearest Neighbors. The algorithm is simple and elegant. It also required no training step, and is very easy to implement. After the preprocessing step, we had a total of 6 independent features, a relatively small number compared to those of other datasets. This means we don't have to concern ourselves with the curse of dimnesionality, because as the number of variables grow, the K-NN algorithm struggles to predict the output of new data. All of these characteristics of the algorithm and our dataset make choosing the K-NN algorithm an easy choice, and it paid off. Our model was able to predict the class of a celestial object with 95% accuracy.
+
+A scatter matrix depicts a covariance matrix of the preprocessed multivariate feature set. The `class_` feature is designated as the target variable because that is the descriptor that we are trying predicat based on the other independent features. The `sklearn` machine learning library is used to split the dataset into a training set and a test set. The size of the test set is arbitrarily set to be 30% of the whole dataset. The `KNeighborsClassifier` library is used the fit a K-Nearest Neighbors model, and make predictions on the test set. The model performed with an accuracy of 0.954, and we are satisfied with this level of accuracy.
+
+Moving forward I would like to consider standardizing all features so that they're homogeneous. K-NN works best when features have the same scale. All columns except for redshift_ seem to be homogeneous, but nonetheless it is worth tinkering with. I would like to add the fourth dataset to the dataframe as well, because the more datapoints the more data the machine has to learn with. This will allow me to use more robust and complex models such as a neural network.
+
+Our next steps are to run a K-Nearest Neighbors on a number of preprocessed datasets, each with a single unique feature removed. This experiment may shed light on which features offer the most significance with regards to the models performance. 
