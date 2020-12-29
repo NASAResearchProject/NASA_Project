@@ -11,7 +11,7 @@ Our next steps are to run a K-Nearest Neighbors on a number of preprocessed data
 
 ---
 
-The variables of the data set are of different scales i.e. one variable is in thousandths and others in the 10s. For e.g. in our data set redshift_ is having values in thousandths and the other features are in of a different scale. Since the data in these variables are of different scales, it is tough to compare these variables. We will convert variables with different scales of measurements into a single scale. StandardScaler normalizes the data using the formula (x-mean)/standard deviation. We will be doing this only for the numerical variables.  
+The variables of the data set are of different scales i.e. one variable is in thousandths and others in the 10s. For e.g. in our data set redshift_ is having values in thousandths and the other features are of a different scale. Since the data in these variables are of different scales, it is tough to compare these variables. We will convert variables with different scales of measurements into a single scale. StandardScaler normalizes the data using the formula (x-mean)/standard deviation. We will be doing this only for the numerical variables.  
 
 So I entered the [Cleaning Complete Dataset]() file and added the following code to scale all columns.  
 ```
