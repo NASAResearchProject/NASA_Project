@@ -8,3 +8,20 @@ A scatter matrix depicts a covariance matrix of the preprocessed multivariate fe
 Moving forward I would like to consider standardizing all features so that they're homogeneous. K-NN works best when features have the same scale. All columns except for redshift_ seem to be homogeneous, but nonetheless it is worth tinkering with. I would like to add the fourth dataset to the dataframe as well, because the more datapoints the more data the machine has to learn with. This will allow me to use more robust and complex models such as a neural network.
 
 Our next steps are to run a K-Nearest Neighbors on a number of preprocessed datasets, each with a single unique feature removed. This experiment may shed light on which features offer the most significance with regards to the models performance. 
+
+---
+
+The variables of the data set are of different scales i.e. one variable is in thousandths and others in the 10s. For e.g. in our data set redshift_ is having values in thousandths and the other features are in of a different scale. Since the data in these variables are of different scales, it is tough to compare these variables. We will convert variables with different scales of measurements into a single scale. StandardScaler normalizes the data using the formula (x-mean)/standard deviation. We will be doing this only for the numerical variables.  
+
+So I entered the [Cleaning Complete Dataset]() file and added the following code to scale all columns.  
+```
+from sklearn.preprocessing import StandardScaler
+std_scale = StandardScaler()
+std_scale
+
+features_to_scale = ['u_', 'g_', 'r_', 'i_', 'z_', 'redshift_']
+
+for feature in features_to_scale:
+    DR_df[feature] = std_scale.fit_transform(DR_df[[feature]])
+```  
+This resulted in an increase in KNN model accuracy, 96.85 percent.
