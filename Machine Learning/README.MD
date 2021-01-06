@@ -66,3 +66,5 @@ y_sm.value_counts(normalize=True) * 100
 ```
 Note that I redefine the X and y variables as they have been redefined in the previous step. Afterwhich I rerun the for loop to discover the optimal value for k, and then fit the model on the newly balanced dataset. After assessing the model, we find the model accuracy has increased to 97.6 percent. The following classification report follows:  
 ![image](https://user-images.githubusercontent.com/68082808/103791844-f2509c00-5010-11eb-9859-08ddabf9b555.png)
+
+I follow the same procedure for the other KNN model where all but the `redshift_` feature is dropped.
