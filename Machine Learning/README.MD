@@ -25,3 +25,10 @@ for feature in features_to_scale:
     DR_df[feature] = std_scale.fit_transform(DR_df[[feature]])
 ```  
 This resulted in an increase in KNN model accuracy, 96.85 percent.
+
+---
+
+According to the [Cleaning Complete Dataset](https://github.com/NASAResearchProject/NASA_Project/blob/Amir-branch/ETL/Cleaning%20Complete%20Dataset.ipynb) file, there exists a class imbalance in the target feature `class_`.  
+![image](https://user-images.githubusercontent.com/68082808/103785920-c382f780-5009-11eb-81d4-5067d57fe778.png)  
+
+In order to overcome this class imbalance we will use SMOTE (Synthetic Minority Over-sampling Technique) to oversample the minority classes. This is a type of data augmentation that synthesizes new samples from existing ones. SMOTE selects samples in the minority class that are close by a KNN algorithm to draw lines between the classes. With this procedure, we can create as many synthetic samples as needed, making SMOTE perfect for datasets of all sizes. 
