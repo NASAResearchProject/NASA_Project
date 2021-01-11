@@ -1,7 +1,7 @@
 # NASA_Project
 
 ## Presentation  
-https://docs.google.com/presentation/d/1IT_PiYN4WrnY3WbVbrXUzG-RIjo1Cg-IqWg3Rjlhg8o/edit?usp=sharing  
+Our final report may be found [here](https://docs.google.com/presentation/d/1IT_PiYN4WrnY3WbVbrXUzG-RIjo1Cg-IqWg3Rjlhg8o/edit?usp=sharing).  
 
 ## Communication Protocols  
 ### Week 1  
