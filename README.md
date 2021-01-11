@@ -1,5 +1,8 @@
 # NASA_Project
 
+## Presentation  
+https://docs.google.com/presentation/d/1IT_PiYN4WrnY3WbVbrXUzG-RIjo1Cg-IqWg3Rjlhg8o/edit?usp=sharing  
+
 ## Communication Protocols  
 ### Week 1  
 My group mate Andres and I chose to create a project regarding space related research. The objective is to create and communicate machine learning algorithms that can predict the type of celestial object based on a number of features. There were four aspects we had to cover, the machine learning model, maintaining the repository, database management and data visualizations. Since there are two of us, we split the responsibilities in half. I cover the machine learning and data visualization aspect, and Andres covers the rest. We communicated our expectations and set checkpoints to have done by the weekend. We then met one on one on zoom to discuss where we're at and what trouble we ran into. For instance, some of the column names in the datasets are keywords in SQL, so we had to consider changing the column names. Although we have different responsibilities we worked closely together to make sure one's work was compatible with the other. For instance, I had to ensure the datasets were properly extracted and transformed before Andres could load the data into an SQL database. One thing I appreciate about group work is how one has to constantly communicate their ideas and to make sure everyone is on the same page. It encourages organization. Andres and I are in touch on a daily basis regarding where we are at, what we need assistance with, and what work we are yet to complete to meet our objectives.
