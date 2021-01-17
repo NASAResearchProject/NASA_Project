@@ -1,6 +1,6 @@
 ## ETL & Preprocessing  
 
-This folder houses two files, [ETL](https://github.com/NASAResearchProject/NASA_Project/blob/Amir-branch/ETL/ETL.ipynb) and [cleaning complete dataset](https://github.com/NASAResearchProject/NASA_Project/blob/Amir-branch/ETL/Cleaning%20Complete%20Dataset.ipynb).
+This folder houses two files, [ETL](https://github.com/NASAResearchProject/NASA_Project/blob/Andres-branch/ETL/ETL.ipynb) and [Dataset_cleaning](https://github.com/NASAResearchProject/NASA_Project/blob/Andres-branch/ETL/Dataset_cleaning.ipynb).
 
 ### ETL  
 In the ETL file, we load Sloan Digital Sky Survey DR12, DR14, and DR16 Server Data. The files are simply concatenated together using a list datatype. In the following cells rows with empty values are removed and duplicate rows are removed (in case the same datapoint happened to be in multiple datasets). Some of the feature names in the dataset are keywords in SQL. So we had to rename all of the features by appending an underscore to all column names. We used these methods on the dataset to maintain the structure of the dataset to improve the performance of machine learning models. 
