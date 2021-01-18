@@ -13,7 +13,7 @@ Our next steps are to run a K-Nearest Neighbors on a number of preprocessed data
 ## Scaling Features
 The variables of the data set are of different scales i.e. one variable is in thousandths and others in the 10s. For e.g. in our data set redshift_ is having values in thousandths and the other features are of a different scale. Since the data in these variables are of different scales, it is tough to compare these variables. We will convert variables with different scales of measurements into a single scale. StandardScaler normalizes the data using the formula (x-mean)/standard deviation. We will be doing this only for the numerical variables.  
 
-So I entered the [Cleaning Complete Dataset](https://github.com/NASAResearchProject/NASA_Project/blob/Amir-branch/ETL/Cleaning%20Complete%20Dataset.ipynb) file and added the following code to scale all columns.  
+So I entered the [Dataset_cleaning](https://github.com/NASAResearchProject/NASA_Project/blob/main/ETL/Dataset_cleaning.ipynb) file and added the following code to scale all columns.  
 ```
 from sklearn.preprocessing import StandardScaler
 std_scale = StandardScaler()
@@ -29,7 +29,7 @@ This resulted in an increase in KNN model accuracy, 96.85 percent.
 ---
 
 ## Balancing Classes with SMOTE  
-According to the [Cleaning Complete Dataset](https://github.com/NASAResearchProject/NASA_Project/blob/Amir-branch/ETL/Cleaning%20Complete%20Dataset.ipynb) file, there exists a class imbalance in the target feature `class_`.  
+According to the [Dataset_cleaning](https://github.com/NASAResearchProject/NASA_Project/blob/main/ETL/Dataset_cleaning.ipynb) file, there exists a class imbalance in the target feature `class_`.  
 ![image](https://user-images.githubusercontent.com/68082808/103785920-c382f780-5009-11eb-81d4-5067d57fe778.png)  
 
 In order to overcome this class imbalance we will use SMOTE (Synthetic Minority Over-sampling Technique) to oversample the minority classes. This is a type of data augmentation that synthesizes new samples from existing ones. SMOTE selects samples in the minority class that are close by a KNN algorithm to draw lines between the classes. With this procedure, we can create as many synthetic samples as needed, making SMOTE perfect for datasets of all sizes. Before we apply SMOTE to the dataset, we will need to massage the data. We use `MinMaxScaler` from `scikit-learn` to scale columns that have values greater than 1 to [0, 1] range. I include the if statement in the for loop to ensure that the target variable, `class_`, is not affected. The following code is applied:  
