@@ -2,7 +2,7 @@
 
 ## Presentation  
 Our final report may be found [here](https://docs.google.com/presentation/d/1IT_PiYN4WrnY3WbVbrXUzG-RIjo1Cg-IqWg3Rjlhg8o/edit?usp=sharing).  
-Interactive Tableau Dashboard may be found [here](https://public.tableau.com/profile/amir.eltabakh#!/vizhome/ClassImbalanceSMOTE/Story1?publish=yes).  
+Interactive Tableau story may be found [here](https://public.tableau.com/profile/amir.eltabakh#!/vizhome/ClassImbalanceSMOTE/Story1?publish=yes).  
 
 
 ## ETL  
